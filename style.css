@@ -3,3 +3,8 @@ h1 {
   background-color: pink;
   font-size: x-large;
 }
+.image-text {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 18px; 
+      color: red;

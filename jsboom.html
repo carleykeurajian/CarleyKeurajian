@@ -26,10 +26,19 @@
         function updateCount() {
             i = i - 1;
             if (i === 0) {
-                countobj.style.color = "pink"; 
+                countobj.style.color = "pink";
+                triggerConfetti();
             countobj = document.getElementById("count");
             console.log("Updating object: " + countobj);
             countobj.innerHTML = "<b>" + i + "</b>";
+        }
+        function triggerConfetti() {
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = Math.random() * window.innerWidth + 'px';
+                document.body.appendChild(confetti);
+            }
         }
     </script>
 </body>

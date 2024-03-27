@@ -1,4 +1,19 @@
 <html>
+<style>
+    /* Confetti animation */
+    @keyframes confetti {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(600px) rotate(360deg); }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #f00; /* Change to your preferred confetti color */
+      animation: confetti 3s ease-out forwards;
+    }
+  </style>
 <body>
     <h1>Exploring the DOM</h1>
 

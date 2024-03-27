@@ -10,18 +10,18 @@
       position: absolute;
       width: 10px;
       height: 10px;
-      background-color: #f00; /* Change to your preferred confetti color */
+      background-color: #f00;
       animation: confetti 3s ease-out forwards;
     }
   </style>
 <body>
-    <h1>Exploring the DOM</h1>
+    <h1>Welcome to the countdown!</h1>
 
-    <h2>Count Down: <span id="count">20</span></h2>
+    <h2>Count Down: <span id="count">10</span></h2>
     <button onclick="updateCount()">Next</button>
 
     <script>
-        var i = 20;
+        var i = 10;
 
         function updateCount() {
             i = i - 1;
@@ -30,7 +30,7 @@
                 triggerConfetti();
             countobj = document.getElementById("count");
             console.log("Updating object: " + countobj);
-            countobj.innerHTML = "<b>" + i + "</b>";
+            countobj.innerHTML = "<b>" + i + "</b>";}
         }
         function triggerConfetti() {
             for (let i = 0; i < 100; i++) {

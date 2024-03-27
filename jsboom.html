@@ -11,10 +11,11 @@
         function updateCount() {
             i = i - 1;
             if (i === 0) {
-                countobj.style.color = "pink";
-                triggerConfetti();
+    
             countobj = document.getElementById("count");
             console.log("Updating object: " + countobj);
+            countobj.style.color = "pink";
+                triggerConfetti();
             countobj.innerHTML = "<b>" + i + "</b>";}
         }
         function triggerConfetti() {

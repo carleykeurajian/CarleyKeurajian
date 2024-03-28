@@ -12,7 +12,8 @@
             i = i - 1;
             countobj = document.getElementById("count");
             console.log("Updating object: " + countobj);
-            var redValue = Math.round(255 * (1 - count / 10));
+            
+        var redValue = Math.round(255 * (1 - count / 10));
             document.body.style.backgroundColor = 'rgb(' + redValue + ', 0, 0)';
             
         if (i === 0) {

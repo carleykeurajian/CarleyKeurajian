@@ -1,22 +1,6 @@
 <html>
-<head>
-    <style>
-        @keyframes confetti {
-            0% { transform: translateY(0) rotate(0deg); }
-            100% { transform: translateY(600px) rotate(360deg); }
-        }
-
-        .confetti {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #f00; /* Change to your preferred confetti color */
-            animation: confetti 3s ease-out forwards;
-        }
-    </style>
-</head>
 <body>
-    <h1>Welcome to the countdown!</h1>
+    <h1>Exploring the DOM</h1>
 
     <h2>Count Down: <span id="count">20</span></h2>
     <button onclick="updateCount()">Next</button>
@@ -25,26 +9,14 @@
         var i = 20;
 
         function updateCount() {
-            var countobj = document.getElementById("count");
             i = i - 1;
+            countobj = document.getElementById("count");
             console.log("Updating object: " + countobj);
             
-            if (i === 0) {
-                countobj.style.color = "pink"; // Change text color to pink when countdown reaches 0
-                triggerConfetti(); // Trigger confetti animation
-            }
-            
-            countobj.innerHTML = "<b>" + i + "</b>";
+        if (i === 0) {
+                countobj.style.color = "pink"
         }
-
-        // Function to trigger confetti animation
-        function triggerConfetti() {
-            for (let i = 0; i < 100; i++) {
-                const confetti = document.createElement('div');
-                confetti.classList.add('confetti');
-                confetti.style.left = Math.random() * window.innerWidth + 'px';
-                document.body.appendChild(confetti);
-            }
+            countobj.innerHTML = "<b>" + i + "</b>";
         }
     </script>
 </body>

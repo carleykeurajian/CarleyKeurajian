@@ -5,9 +5,10 @@
     <h2>Count Down: <span id="count">10</span></h2>
     <button onclick="updateCount()">Next</button>
 
-    <h3>Click for Confetti</h3>
-    <button onclick="triggerConfetti()">yay!</button>
-    <span id="confetti"></span>
+    <h3>Click Me</h3>
+    <button onclick="colorButton()">yay!</button>
+    <button id="green">yay!</button>
+    
     
     <script>
         var i = 10;
@@ -29,15 +30,9 @@
     </script>
 
     <script>
-        function triggerConfetti() {
-                const confetti = document.createElement('div');
-                confetti.classList.add('confetti');
-                confetti.style.left = Math.random() * window.innerWidth + 'px';
-                document.body.appendChild(confetti);
-            }
-        document.getElementById("confetti").addEventListener("click", function() {
-            triggerConfetti();
-        }
+        document.getElementById('colorButton').addEventListener('click', function() {
+        var randomColor = "#FFFFFF";
+        document.body.style.backgroundColor = white;
         }
         
     </script>

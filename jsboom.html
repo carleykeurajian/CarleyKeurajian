@@ -12,7 +12,6 @@
     <script>
         var i = 10;
 
-        
         function updateCount() {
             i = i - 1;
             countobj = document.getElementById("count");
@@ -27,6 +26,7 @@
                 countobj.style.color = "pink"
         }
         }
+        
         function triggerConfetti() {
             for (let i = 0; i < 100; i++) {
                 const confetti = document.createElement('div');
@@ -37,7 +37,7 @@
         document.getElementById("confettiButton").addEventListener("click", function() {
             triggerConfetti();
         }
-                                                                   }
+        }
         
     </script>
     

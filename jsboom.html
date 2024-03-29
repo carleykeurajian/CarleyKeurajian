@@ -7,13 +7,12 @@
 
     <script>
         var i = 10;
-
-        document.body.style.backgroundColor = "red";
         
         function updateCount() {
             i = i - 1;
             countobj = document.getElementById("count");
             console.log("Updating object: " + countobj);
+            countobj.innerHTML = "<b>" + i + "</b>";
             updateBackgroundColor(count);
 
         if (i <= 10) { 
@@ -24,7 +23,6 @@
                 countobj.style.color = "pink"
         }
 
-            countobj.innerHTML = "<b>" + i + "</b>";
         }
         }
 

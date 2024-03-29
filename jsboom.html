@@ -27,16 +27,8 @@
     <button onclick="updateCount()">Next</button>
 
     <h3>Click Me <span id="color">!</span></h3>
-    <button onclick="colorButton()">yay!</button>
+    <button onclick="colorBackground()">yay!</button>
     
-
-    <script>
-       function colorButton() {
-    document.getElementById("colorButton").addEventListener('click', function() {
-        document.body.style.backgroundColor = "#FFFFFF";
-    })
-    }
-    </script>
     
     <script>
         var i = 10;
@@ -54,6 +46,9 @@
         if (i === 0) {
                 countobj.style.color = "pink"
         }
+        }
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = "#FFFFFF";
         }
     </script>
 

@@ -1,4 +1,23 @@
 <html>
+<style>
+  #carousel-container {
+    width: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  #carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .carousel-item {
+    width: 400px;
+    flex: 0 0 auto;
+  }
+  button {
+    margin-top: 10px;
+    cursor: pointer;
+  }
+</style>
 <body>
     <h1>Welcome to the countdown!</h1>
 
@@ -8,6 +27,13 @@
     <h3>Click Me</h3>
     <button id="colorButton()">yay!</button>
 
+    <script>
+       function colorButton() {
+    document.getElementById("colorButton").addEventListener('click', function() {
+        document.body.style.backgroundColor = "#FFFFFF";
+    })
+    }
+    </script>
     
     <script>
         var i = 10;
@@ -26,15 +52,6 @@
                 countobj.style.color = "pink"
         }
         }
-    </script>
-
-    <script>
-       function colorButton() {
-    document.getElementById("colorButton").addEventListener('click', function() {
-        document.body.style.backgroundColor = "#FFFFFF";
-    });
-}
-        
     </script>
 
     <div class="carousel">

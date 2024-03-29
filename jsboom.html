@@ -9,10 +9,12 @@
         var i = 10;
 
         document.body.style.backgroundColor = "red";
+        
         function updateCount() {
             i = i - 1;
             countobj = document.getElementById("count");
-            console.log("Updating object: " + countobj);        
+            console.log("Updating object: " + countobj);
+            updateBackgroundColor(count);
             
         if (i === 0) {
                 countobj.style.color = "pink"
@@ -20,12 +22,14 @@
 
             countobj.innerHTML = "<b>" + i + "</b>";
         }
-        
-        function updateCount() {
-            document.getElementById('count').innerText = count;    
-            var redValue = Math.round(255 * (1 - count / 10));
-            document.body.style.backgroundColor = 'rgb(' + redValue + ', 0, 0)';
+
+        function updateBackgroundColor(count) {
+            
+            var redValue = Math.round(255 * (1 - 1/10)); // Adjust 20 according to your max count
+
+            document.body.style.backgroundColor = 'red';
         }
+
         
     </script>
 </body>

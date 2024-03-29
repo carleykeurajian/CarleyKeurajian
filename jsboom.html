@@ -7,7 +7,7 @@
 
     <h3>Click for Confetti</h3>
     <button onclick="triggerConfetti()">yay!</button>
-    <span id="confetti">
+    <span id="confetti"></span>
     
     <script>
         var i = 10;
@@ -26,18 +26,19 @@
                 countobj.style.color = "pink"
         }
         }
-        
+    </script>
+
+    <script>
         function triggerConfetti() {
-            for (let i = 0; i < 100; i++) {
                 const confetti = document.createElement('div');
                 confetti.classList.add('confetti');
                 confetti.style.left = Math.random() * window.innerWidth + 'px';
                 document.body.appendChild(confetti);
             }
-        document.getElementById("confettiButton").addEventListener("click", function() {
+        document.getElementById("confetti").addEventListener("click", function() {
             triggerConfetti();
         }
-        });
+        }
         
     </script>
     

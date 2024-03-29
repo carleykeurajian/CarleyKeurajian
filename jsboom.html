@@ -21,6 +21,9 @@
     cursor: pointer;
   }
 </style>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script>
+</head>
 <body>
     <h1>Welcome to the countdown!</h1>
 
@@ -46,6 +49,7 @@
             
         if (i === 0) {
                 countobj.style.color = "pink"
+                triggerConfetti();
         }
         }
         function colorBackground() {
@@ -78,6 +82,12 @@
   function updateCarousel() {
     const offset = -currentIndex * carouselItems[0].offsetWidth;
     carousel.style.transform = `translateX(${offset}px)`;
+  }
+</script>
+<script>
+  function triggerConfetti() {
+    // Trigger confetti with default settings
+    confetti();
   }
 </script>
 

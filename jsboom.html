@@ -21,7 +21,7 @@
             countobj.innerHTML = "<b>" + i + "</b>";
         }
         
-        function updateCount(count) {
+        function updateCount() {
             document.getElementById('count').innerText = count;    
             var redValue = Math.round(255 * (1 - count / 10));
             document.body.style.backgroundColor = 'rgb(' + redValue + ', 0, 0)';

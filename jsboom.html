@@ -12,10 +12,7 @@
         function updateCount() {
             i = i - 1;
             countobj = document.getElementById("count");
-            console.log("Updating object: " + countobj);
-    
-        var redValue = Math.round(255 * (1 - 9/10));
-        
+            console.log("Updating object: " + countobj);        
             
         if (i === 0) {
                 countobj.style.color = "pink"
@@ -23,6 +20,13 @@
 
             countobj.innerHTML = "<b>" + i + "</b>";
         }
+        
+        function updateCount(count) {
+            document.getElementById('count').innerText = count;    
+            var redValue = Math.round(255 * (1 - count / 10));
+            document.body.style.backgroundColor = 'rgb(' + redValue + ', 0, 0)';
+        }
+        
     </script>
 </body>
 </html>

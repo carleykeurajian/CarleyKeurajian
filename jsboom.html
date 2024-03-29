@@ -64,5 +64,23 @@
   </div>
   <button id="picture">Next</button>
 
+  <script>
+  const carousel = document.getElementById('carousel');
+  const nextBtn = document.getElementById('picture');
+  const carouselItems = document.querySelectorAll('.carousel-item');
+  const totalItems = carouselItems.length;
+  let currentIndex = 0;
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    const offset = -currentIndex * carouselItems[0].offsetWidth;
+    carousel.style.transform = `translateX(${offset}px)`;
+  }
+</script>
+
 </body>
 </html>

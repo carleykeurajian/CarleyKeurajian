@@ -26,9 +26,20 @@
         if (i === 0) {
                 countobj.style.color = "pink"
         }
-
         }
+        function triggerConfetti() {
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = Math.random() * window.innerWidth + 'px';
+                document.body.appendChild(confetti);
+            }
+        document.getElementById("confettiButton").addEventListener("click", function() {
+            triggerConfetti();
+        }
+                                                                   }
+        
     </script>
-    <script src="confetti.js"></script>
+    
 </body>
 </html>
